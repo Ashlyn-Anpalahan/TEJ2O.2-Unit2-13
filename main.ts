@@ -6,7 +6,7 @@
 */
 
 // variables
-let strip = neopixel.create(DigitalPin.P0, 4, NeoPixelMode.RGB)
+const strip = neopixel.create(DigitalPin.P0, 4, NeoPixelMode.RGB)
 let countdown = 4 
 
 basic.showIcon(IconNames.Happy)
