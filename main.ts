@@ -17,7 +17,7 @@ input.onButtonPressed(Button.A, function() {
     strip.clear()
     
     // display number
-    let displayValue = 4 - counter
+    const displayValue = 4 - counter
 
         // show neopixels
         strip.range(0, displayValue).showColor(neopixel.colors(NeoPixelColors.Violet))
