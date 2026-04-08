@@ -7,23 +7,26 @@
 
 // variables
 const strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-let countdown = 4 
+let counter = 0 
 
 basic.showIcon(IconNames.Happy)
 
 // button a 
 input.onButtonPressed(Button.A, function() {
-    while (countdown >= 0) {
+    while (counter <= 4) {
     strip.clear()
     
+    // display number
+    let displayValue = 4 - counter
+
         // show neopixels
-        strip.range(0, countdown).showColor(neopixel.colors(NeoPixelColors.Violet))
-        basic.showNumber(countdown)
+        strip.range(0, displayValue).showColor(neopixel.colors(NeoPixelColors.Violet))
+        basic.showNumber(displayValue)
 
         basic.pause(1000)
 
         // change number 
-        countdown = countdown - 1
+        counter = counter + 1
     }
 
     strip.clear()
